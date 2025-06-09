@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="MassTransit" Version="8.3.1" />
+    <PackageReference Include="Otus.QueueDto" Version="1.0.5.2" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\MangaLib.Common.Infrastructure.Queues.Abstraction\MangaLib.Common.Infrastructure.Queues.Abstraction.csproj" />
+    <ProjectReference Include="..\..\Common\MangaLib.Common\MangaLib.Common.csproj" />
+    <ProjectReference Include="..\..\Domain\MangaLib.Domain.Repositories.Abstractions\MangaLib.Domain.Repositories.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Domain\MangaLib.Domain\MangaLib.Domain.csproj" />
+    <ProjectReference Include="..\MangaLib.Application.Models\MangaLib.Application.Models.csproj" />
+  </ItemGroup>
+  
+</Project>
