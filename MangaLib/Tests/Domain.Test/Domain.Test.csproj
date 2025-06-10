@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\MangaLib.Application.Models\MangaLib.Application.Models.csproj" />
+    <ProjectReference Include="..\..\Application\MangaLib.Application.Services\MangaLib.Application.Services.csproj" />
+    <ProjectReference Include="..\..\Common\MangaLib.Common.Infrastructure.Queues.Abstraction\MangaLib.Common.Infrastructure.Queues.Abstraction.csproj" />
+    <ProjectReference Include="..\..\Common\MangaLib.Common\MangaLib.Common.csproj" />
+    <ProjectReference Include="..\..\Domain\MangaLib.Domain.Repositories.Abstractions\MangaLib.Domain.Repositories.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Domain\MangaLib.Domain.Services\MangaLib.Domain.Services.csproj" />
+    <ProjectReference Include="..\..\Domain\MangaLib.Domain.ValueObjects\MangaLib.Domain.ValueObjects.csproj" />
+    <ProjectReference Include="..\..\Domain\MangaLib.Domain\MangaLib.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\MangaLib.Infrastructure.EntityFramework\MangaLib.Infrastructure.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\Presentation\MangaLib.WebHost\MangaLib.WebHost.csproj" />
+  </ItemGroup>
+
+</Project>

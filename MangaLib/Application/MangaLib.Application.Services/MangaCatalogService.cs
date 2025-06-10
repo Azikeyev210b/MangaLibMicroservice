@@ -40,15 +40,7 @@ namespace Application.Services
 
         public async Task<MangaModel> CreateMangaAsync(CreateMangaModel model, CancellationToken ct)
         {
-            var manga = new Manga(
-                id: 0,
-                title: model.Title,
-                description: model.Description,
-                coverImageUrl: model.CoverImageUrl,
-                releaseDate: model.ReleaseDate);
-
-            manga.SetAuthors(model.Authors);
-            manga.SetTags(model.Tags);
+            var manga = _mapper.Map<Manga>(model);
 
             await _mangaRepo.AddAsync(manga, ct);
             await _mangaRepo.SaveChangesAsync(ct);

@@ -8,6 +8,7 @@ namespace Application.Services.Mapping
     {
         public ApplicationProfile()
         {
+            // Manga -> MangaModel
             CreateMap<Manga, MangaModel>()
                 .ForMember(dest => dest.Authors,
                     opt => opt.MapFrom(src => src.GetAuthors()
@@ -16,15 +17,14 @@ namespace Application.Services.Mapping
                     opt => opt.MapFrom(src => src.GetTags()
                         .Split('|', StringSplitOptions.RemoveEmptyEntries)));
 
+            // CreateMangaModel -> Manga
             CreateMap<CreateMangaModel, Manga>()
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
+                .ForMember(dest => dest.Status, opt => opt.Ignore())
                 .AfterMap((src, dest) => {
                     dest.SetAuthors(src.Authors);
                     dest.SetTags(src.Tags);
                 });
-            CreateMap<Chapter, ChapterModel>()
-                .ForMember(dest => dest.PageCount,
-                opt => opt.MapFrom(src => src.Pages.Count));
         }
     }
 }
